@@ -1,0 +1,65 @@
+<html>
+<head><title>Apple Availability</title>
+<style>
+table{
+background-color:pink;
+font-family:courier;
+}
+header{
+color:red;
+}
+footer{
+color:red;
+}
+</style></head>
+<body background="C:\Users\Santosh Thota\Downloads\banana.jpg" alt="apple" width="100" height="100">
+<header><p><center><h3>Price : 50/-</h3> <br><h3> Quantity :20 bags </h3><br><h3> Availability of Apples : YES</h3><br></center>
+</p></header>
+<form>
+  <p>Number of Fruits :<input id="num" type="text" oninput="calc()" /> </p>
+  <p>Price Per Fruit : $<span id="ticket_price">50</span></p>
+  <p>Booking fee : $2</p>
+  <p>Subtotal : <b>$<span id="total">0</span></b></p>
+<legend><center><b>Ordering</b></center></legend>
+<center><table style="width:50%;border:5px solid blue"> 
+<tr>
+<td>Customer Name:</td>
+<td><input type="text" placeholder="customer name" name=" "></td>
+</tr>
+<tr>
+<td>Contact No:</td>
+<td><input type="number" placeholder="contact number" name=" "></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><input type="mail" placeholder="mail id" name=" "></td>
+</tr>
+<tr>
+<td>Choose Quantity:</td>
+<td><input type="number" placeholder="quantity" name=" "></td>
+</tr>
+<tr>
+<td>Address:</td>
+<td><textarea rows="4" cols="50" name="address"></textarea></td>
+
+</tr>
+</table>
+<button type="submit" value="submit">submit</button>
+</center>
+</form>
+<script>
+function calc() 
+{
+  var price = document.getElementById("ticket_price").innerHTML;
+  var noFruits = document.getElementById("num").value;
+  var total = parseFloat(price) * noFruits;
+  if (!isNaN(total))
+    document.getElementById("total").innerHTML = total
+}
+</script>
+<footer>
+<p>shop:Santosh Fruit Mart</p>
+<p><a href="mailto:santsh555@gmail.com">santosh@fruits.com</a></p>
+</footer>
+</body>
+</html>

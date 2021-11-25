@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+
+
+function area(){
+var s1=5;
+var s2=6;
+var s3=7;
+var s=((s1+s2+s3)/2);
+var area1=Math.sqrt(s*(s-s1)*(s-s2)*(s-s3));
+document.write("the area of triangle is :"+area1);
+}
+document.write(area());
+
+document.write('</br>');
+var a=Number(prompt("Enter number1"));
+var b=Number(prompt("Enter number2"));
+document.write('</br>');
+document.write("Add of two numbers :"+(a+b));
+document.write('</br>');
+document.write("Sub of two numbers :"+(a-b));
+document.write('</br>');
+document.write("Mul of two numbers :"+(a*b));
+document.write('</br>');
+document.write("Div of two numbers :"+(a/b));
+
+document.write('</br>');
+
+document.write('</br>');
+var number = parseInt(prompt('Enter an integer: '));
+for(i = 1; i <= 10; i++) {
+var result = i * number;
+document.write(`${number} * ${i} = ${result}`+'</br>');
+}
+
+document.write('</br>');
+function dob() {
+               var birthDay = "1998-04-23";
+                var DOB = new Date(birthDay);
+                var today = new Date();
+                var age = today.getTime() - DOB.getTime();
+                var elapsed = new Date(age);
+                var year = elapsed.getYear()-70;
+                var month = elapsed.getMonth();
+                var day = elapsed.getDay();
+                var ageTotal = year + " Years," + month + " Months," + day + " Days";
+
+                document.write("Formatted DOB is:"+ageTotal);
+
+            }
+document.write('</br>');
+document.write(dob());
+
+</script>
+</body>
+</html>

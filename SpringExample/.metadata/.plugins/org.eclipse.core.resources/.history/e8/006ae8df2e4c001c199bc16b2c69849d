@@ -1,0 +1,38 @@
+package com.example.demo.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.example.demo.Task;
+import com.example.demo.TaskInterface;
+
+@Component
+public class DefaultTask implements TaskInterface {
+
+	@Override
+	public Task getTask(int id) {
+		Task t  = new Task();
+		 
+		//connect the db, get the task with id 
+		t.setTaskid(100);
+		t.setOwnerid(20);
+		t.setCreatorid(123);
+		t.setStatus("active");
+		t.setPriority("First");
+		t.setNotes("Set");
+		t.setIsBookmarked(true);
+		t.setTaskname("REST Controller");
+		t.setDesc("Write a rest contrller for getting tasks");
+		
+		return t;
+	}
+
+	@Override
+	public List<Task> task() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

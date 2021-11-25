@@ -1,0 +1,31 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RESTController {
+	@Autowired
+	TaskInterface task;
+	//@GetMapping(value = "/task")
+
+	@RequestMapping(value = "/task", method = RequestMethod.GET,produces = {"application/json","application/xml"})
+	public Task getTask() {
+		return task.getTask(100);	
+	}
+	public List<Task> task(){
+		List<Task> newTask = new ArrayList<>();
+		newTask.add(new Task(1, "101"));
+		newTask.add(new Task(4, "Santosh"));
+		
+		return (List<Task>) task;
+	}
+	
+}

@@ -1,0 +1,9 @@
+package com.sonata.Employee;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private String address;
+	private double basicPay;
+	}
+

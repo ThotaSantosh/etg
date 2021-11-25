@@ -1,0 +1,13 @@
+
+public class StringBuilderExample {
+
+
+public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("Welcome Thota Santosh");
+    
+    System.out.println("Size of string: " + sb.length());
+    sb.setLength(50);
+    System.out.println("New size of the string: " + sb.length());
+    
+  }
+}

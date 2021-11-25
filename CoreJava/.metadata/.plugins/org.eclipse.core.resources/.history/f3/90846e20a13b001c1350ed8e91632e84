@@ -1,0 +1,7 @@
+package com.sonata.InterfaceExample;
+
+public interface BankInterface {
+int abc=20;
+public double withDraw(double amount);
+public double deposit(double amount);
+}

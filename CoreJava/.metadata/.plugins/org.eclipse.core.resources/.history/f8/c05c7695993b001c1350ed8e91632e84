@@ -1,0 +1,13 @@
+package com.sonata.InterfaceExample;
+
+public class Bank {
+	int accId;
+	String accName;
+	double balance;
+	Bank() {}
+	public Bank(int accId,String accName,double balance) {
+	accId=accId;
+	accName=accName;
+	balance=balance;
+	}
+}

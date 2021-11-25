@@ -1,0 +1,8 @@
+package com.example.demo;
+
+import java.util.List;
+
+public interface TaskInterface {
+	public Task getTask(int id);
+	public List<Task> task();
+}

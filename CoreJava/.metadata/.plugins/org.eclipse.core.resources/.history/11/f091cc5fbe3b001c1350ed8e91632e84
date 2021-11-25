@@ -1,0 +1,10 @@
+package com.sonata.InterfaceExample;
+
+public class ProductDetails extends Product implements ProductInterface  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

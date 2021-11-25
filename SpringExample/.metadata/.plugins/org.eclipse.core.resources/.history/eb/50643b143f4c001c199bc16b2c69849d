@@ -1,0 +1,77 @@
+package com.example.demo;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.config.Task;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.TaskDao;
+@Component
+public class TaskDaoImpl implements TaskInterface {
+	DbConnection db;
+
+	String row ;
+
+	
+	Task task = null;
+
+
+
+	public String getAllTasks(Task object){
+		List<Task> task =new ArrayList<>(); 
+
+	try {
+	task = (List<Task>) object;
+	PreparedStatement ps = db.getConnection().prepareStatement("Insert into task values(?,?,?,?,?,?,?,?,?,?,?)");
+	ps.setInt(1, task.getTaskID());
+	ps.setInt(2, task.getOwnerID());
+	ps.setInt(3, task.getCreatorID());
+	ps.setString(4, task.getName());
+	ps.setString(5, task.getDescription());
+	ps.setString(6, task.getStatus());
+	ps.setString(7, task.getPriority());
+	ps.setString(8, task.getNotes());
+	ps.setBoolean(9, task.getIsBookmarked());
+	ps.setString(10, task.getCreatedOn());
+	ps.setString(11, task.getStatusChangedOn());
+	row = ps.executeUpdate();
+	db.closeConnection();
+	
+	}catch(SQLException e) {System.out.println(e);}
+
+	return row;
+	}
+
+
+
+	@Override
+	public List<Task> getAllTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public Task getTask(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public Task getTask() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	}
+	
+	
+
+}

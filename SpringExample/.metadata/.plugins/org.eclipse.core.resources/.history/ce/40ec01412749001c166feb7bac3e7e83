@@ -1,0 +1,30 @@
+package com.sonata.login;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+	
+
+import com.sonata.loginform.LoginForm;
+
+	@Controller
+	public class LoginController {
+
+	    @RequestMapping("/index")
+	    public String showForm(LoginForm loginForm) {
+	        return "login";
+	    }
+
+	    @RequestMapping("/")
+	    public String validateLoginInfo(Model model, LoginForm loginForm, BindingResult bindingResult) {
+	        if (bindingResult.hasErrors()) {
+	            return "login";
+	        }
+	        model.addAttribute("user", loginForm.getuserName());
+	        return "home";
+	    }
+	
+}

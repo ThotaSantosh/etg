@@ -1,0 +1,29 @@
+package com.sonata;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class TestStudent {
+
+	
+	public static void main(String[] args) {
+		Student std = new Student();
+		  std.setStdId(23);
+		  std.setStdName("Ganesh123");
+		  
+		  Student std2=new Student();
+		  std2.setStdId(21018);
+		  std2.setStdName("santosh");
+		  
+		SessionFactory factory= new Configuration().configure().buildSessionFactory();
+		Session s1 = factory.openSession();
+		s1.beginTransaction();
+		s1.save(std);
+		s1.save(std2);
+		s1.getTransaction().commit();
+		s1.close();
+
+	}
+
+}

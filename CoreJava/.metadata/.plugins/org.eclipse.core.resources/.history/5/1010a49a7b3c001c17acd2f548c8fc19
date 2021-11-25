@@ -1,0 +1,16 @@
+
+public class StringBuilderExample {
+
+
+public static void main(String[] args) {
+    StringBuilder sb = new StringBuilder("Welcome Thota Santosh");
+    
+    System.out.println("Size of string: " + sb.length());
+    System.out.println("Original string: " + sb);
+    System.out.println("Char at index 3: " + sb.charAt(3));
+    System.out.println("Index of string 'to' : " + sb.indexOf("to"));
+    System.out.println("Last index of string 'to' : " + sb.lastIndexOf("os"));
+
+    
+  }
+}

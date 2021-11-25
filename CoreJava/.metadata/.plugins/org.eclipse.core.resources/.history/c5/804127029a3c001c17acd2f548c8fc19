@@ -1,0 +1,12 @@
+package com.sonata.CollectionExamples;
+
+import java.util.ArrayList;
+
+public class CompareExample {
+public static void main(String[] args) {
+	ArrayList<Student> n1=new ArrayList<>();
+	n1.add(new Student(21019,"thota",35));
+	n1.add(new Student(21018,"santosh",35));
+	
+}
+}

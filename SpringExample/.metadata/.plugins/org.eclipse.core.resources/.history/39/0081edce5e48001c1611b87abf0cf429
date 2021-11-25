@@ -1,0 +1,22 @@
+package com.example.demo.impl;
+
+import java.sql.SQLException;
+
+import com.example.demo.DbConnection;
+import com.example.demo.UserValidationInterface;
+public class DefaultUserValidation implements UserValidationInterface {
+	public boolean validate(String Uname,String pwd)
+	{
+		int row=0;
+		DbConnection db=new DbConnection();
+		
+		try {
+			String sql = "select password from task"+" where name="+Uname;
+			db.closeConnection();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return true;
+	}
+}

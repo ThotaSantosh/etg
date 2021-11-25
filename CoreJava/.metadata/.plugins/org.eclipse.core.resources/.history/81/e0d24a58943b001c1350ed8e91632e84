@@ -1,0 +1,31 @@
+package com.sonata;
+
+public class FinalExample {
+
+	final int accNo = 0;
+	String accName;
+	double accBal;
+	//default constructor
+	void FinalExample(){
+	final int accNo=101;	
+	}
+	//constructor with parameters
+	public double deposit() {
+		return accBal=accBal+10;
+	}
+	public double withdraw() {
+		return accBal=accBal-10;
+	}
+	public void display() {
+		System.out.println(accNo);
+		System.out.println(accName);
+		System.out.println(accBal);
+		
+	}
+	public static void main(String[] args) {
+		FinalExample b1=new FinalExample();
+		b1.accName="santosh";
+		b1.accBal=29641;
+		b1.display();
+}
+}

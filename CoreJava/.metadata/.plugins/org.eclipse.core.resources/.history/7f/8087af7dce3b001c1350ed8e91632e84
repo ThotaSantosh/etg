@@ -1,0 +1,11 @@
+package com.sonata.ThreadExamples;
+
+public class SynchronizeExample {
+public static void main(String args[]) {
+	ClassOne s1=new ClassOne();
+	ClassTwo s2=new ClassTwo(s1);
+	ClassThree s3=new ClassThree(s1);
+	s2.start();
+	s3.start();
+}
+}

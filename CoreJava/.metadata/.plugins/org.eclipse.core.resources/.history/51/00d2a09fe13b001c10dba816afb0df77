@@ -1,0 +1,22 @@
+package com.sonata;
+
+public class Circle extends Shape {
+	Circle(int l,int b,int w){
+		super(l,b,w);
+	}
+	Circle(){}
+	public double area(){
+		super.area(r);
+		System.out.println("child class");
+		return area=pi*r*r;
+	}
+	public static void main(String args[]) {
+		Circle R=new Circle();
+		R.length=10;
+		R.breadth=20;
+		R.width=30;
+		
+		R.display();
+		
+	}
+}

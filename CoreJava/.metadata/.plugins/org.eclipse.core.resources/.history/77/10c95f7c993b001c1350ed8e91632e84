@@ -1,0 +1,7 @@
+package com.sonata.InterfaceExample;
+
+public interface EmployeeInterface {
+int a=30;
+public static void sal (double salary) {;
+}
+}

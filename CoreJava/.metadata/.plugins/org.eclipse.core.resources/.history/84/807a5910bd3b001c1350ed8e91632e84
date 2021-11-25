@@ -1,0 +1,16 @@
+package com.sonata.InterfaceExample;
+
+public abstract class CustomerProduct extends Product implements ProductInterface{
+	public double buyProduct(double amount) {
+		return 0;
+	}
+	public double sellProduct(double amount) {
+		return 0;
+	}
+	public static void main(String[] args) {
+		BankInterface b1 =new CurrentAcc();
+		b1.newMethod();
+		b1.myMethod();
+		BankInterface.anotherNewMethod();
+	}
+}

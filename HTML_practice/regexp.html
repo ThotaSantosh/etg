@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="p-4">
+ <form id="myform">
+ <p>Full Name: <input id="name" value=""></p>
+<input type="button" onclick="validate();" value="Validate Name">
+  <p>Emp id: <input id="number" value=""></p>
+<input type="button" onclick="validate();" value="Validate Number">
+  <div>
+  <label for="myform_phone">Phone:</label>
+  <input type="text" id="myform_phone" name="phone" />
+    <div id="phone_error" class="error hidden">Please enter a valid phone number</div>
+  </div>
+  <div class="mt-2">
+    <button type="submit">Submit</button>
+  </div>
+  </form>
+</div>
+<script>
+function validatePhoneNumber(input_str) {
+    var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+	return re.test(input_str);
+}
+function validateForm(event) {
+    var phone = document.getElementById('myform_phone').value;
+    if (!validatePhoneNumber(phone)) {
+        document.getElementById('phone_error').classList.remove('hidden');
+    } else {
+        document.getElementById('phone_error').classList.add('hidden');
+        alert("validation success")
+    }
+    event.preventDefault();
+}
+
+document.getElementById('myform').addEventListener('submit', validateForm);
+
+function validate(){
+    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var name = document.getElementById('name').value;
+    if(!regName.test(name)){
+        alert('Please enter your full name (first & last name).');
+        document.getElementById('name').focus();
+        return false;
+    }else{
+        alert('Valid name given.');
+        return true;
+    }
+}
+
+
+</script>
+</body>
+</html>

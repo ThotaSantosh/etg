@@ -1,0 +1,14 @@
+package com.sonata.CollectionExamples;
+import java.util.*;
+public class CollectionExample {
+
+	public static void main(String[] args) {
+		ArrayList l1=new ArrayList();
+		l1.add("mom");
+		l1.add("dad");
+		l1.remove(1);
+		System.out.println(l1);
+
+	}
+
+}

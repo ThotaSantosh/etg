@@ -1,0 +1,35 @@
+package com.example.demo.impl;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.example.demo.DbConnection;
+import com.example.demo.Task;
+import com.example.demo.UserValidationInterface;
+public class DefaultUserValidation implements UserValidationInterface {
+	public boolean validate(String Uname,String pwd)
+	{
+		int row=0;
+		DbConnection db=new DbConnection();
+		String sql = "select password from task"+" where name="+Uname;
+		try {
+			PreparedStatement cs=db.getConnection().prepareStatement("select * from task");
+			cs.setString(1,Task.getTaskId());
+			cs.setString(2,Task.getownerId());
+			cs.setString(3,Task.getcreatorId());
+			cs.setString(4,Task.getName());
+			cs.setInt(5,task.getcontact_no());
+			cs.setString(6,task.getRole());
+			cs.setBoolean(7, task.getisActive());
+			cs.setString(8,task.getDob());
+			cs.setString(9,task.getcreatedOn());
+			cs.setInt(10, task.getuserId());
+			row=cs.executeUpdate();
+			db.closeConnection();
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return true;
+	}
+}

@@ -1,0 +1,20 @@
+package com.sonata.serializable;
+import java.io.*;
+public class EmployeeSerializ {
+public static void main(String[] args) throws IOException {
+	Employee obj=new Employee(21018,"thota santosh","guntur");
+	ObjectOutputStream oos=null;
+	FileOutputStream fos=null;
+	Employee ob=null;
+	try {
+		fos=new FileOutputStream("D:\\test.ser");
+		oos=new ObjectOutputStream(fos);
+		oos.writeObject(obj);
+		
+	}
+	finally {
+		oos.close();
+		fos.close();
+	}
+}
+}

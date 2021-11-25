@@ -1,0 +1,8 @@
+
+public class StringClassExample {
+
+	public static void main(String[] args) {
+		String s="santosh";
+		System.out.println(s.toUpperCase());
+	}
+}

@@ -1,0 +1,13 @@
+package com.sonata.StreamMapApi;
+import java.util.*;
+public class SortMapStream {
+public static void main(String[] args) {
+	Map<String,Integer> map=new HashMap<>();
+	map.put("eight", 8);
+	map.put("five", 5);
+	map.put("six", 6);
+	map.put("seven", 7);
+
+
+}
+}

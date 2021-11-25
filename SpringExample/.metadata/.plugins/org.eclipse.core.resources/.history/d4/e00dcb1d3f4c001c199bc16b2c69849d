@@ -1,0 +1,63 @@
+package com.example.demo.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.scheduling.config.Task;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.TaskInterface;
+
+@Component
+public class DefaultTask implements TaskInterface {
+
+	public Task getTask1(int id) {
+		Task t  = new Task(null);
+		 
+		//connect the database, get the task with id 
+		t.setTaskid(100);
+		t.setOwnerid(20);
+		t.setCreatorid(123);
+		t.setStatus("active");
+		t.setSetPriority("First");
+		t.setSetnotes("Set");
+		t.setBookmarked(true);
+		t.setTaskname("REST Controller");
+		t.setDesc("Write a rest contrller for getting tasks");
+		
+		return t;
+	}
+
+	@Override
+	public List<Task> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<org.springframework.scheduling.config.Task> getAllTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public org.springframework.scheduling.config.Task getTask(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public org.springframework.scheduling.config.Task getTask() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String setPriority() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

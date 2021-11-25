@@ -1,0 +1,64 @@
+package com.example.demo;
+import javax.xml.bind.annotation.XmlRootElement;
+@XmlRootElement
+public class Task {
+	private int taskid;
+	private String taskname;
+	private String desc;
+	private int ownerid;
+	private int creatorid;
+	private String status;
+	private String setnotes;
+	private boolean isBookmarked=true;
+	
+	public int getOwnerid() {
+		return ownerid;
+	}
+	public void setOwnerid(int i) {
+		this.ownerid = i;
+	}
+	public int getCreatorid() {
+		return creatorid;
+	}
+	public void setCreatorid(int i) {
+		this.creatorid = i;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getSetnotes() {
+		return setnotes;
+	}
+	public void setSetnotes(String setnotes) {
+		this.setnotes = setnotes;
+	}
+	public boolean isBookmarked() {
+		return isBookmarked;
+	}
+	public void setBookmarked(boolean isBookmarked) {
+		this.isBookmarked = isBookmarked;
+	}
+	public String getTaskname() {
+		return taskname;
+	}
+	public void setTaskname(String taskname) {
+		this.taskname = taskname;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	public int getTaskid() {
+		return taskid;
+	}
+	public void setTaskid(int taskid) {
+		this.taskid = taskid;
+	}
+	
+		
+}

@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Variables</title>
+<script type="text/javascript">
+alert("welcome to JavaScript");
+var one = 22; 
+var two = 3; 
+var add = one + two; 
+var minus = one - two; 
+var multiply = one * two;
+var divide = one/two;
+document.write("First No: = " + one + "<br />Second No: = " + two + " <br />");
+document.write(one + " + " + two + " = " + add + "<br/>");
+document.write(one + " - " + two + " = " + minus + "<br/>");
+document.write(one + " * " + two + " = " + multiply + "<br/>");
+document.write(one + " / " + two + " = " + divide + "<br/>");
+document.write("</br>")
+if(one>two){
+document.write("one is big");
+}
+else{
+document.write("two is big");
+}
+document.write("</br>")
+document.write("</br>")
+var students =new Array("John", "Anne", "Kevin");
+document.write("students are")
+document.write("</br>")
+document.writeln("-------------")
+document.write("</br>")
+for(i=0;i<students.length;i++){
+document.write("</br>"+students[i]+"</br>")
+}
+student={name:"Thota Santosh",college:"RVR and JC college of Engineering",dob:"23-4-1998",mobileno:9642298102}
+document.write("</br>"); 
+document.write(student.name);
+document.write("</br>");  
+document.write(student.college);
+document.write("</br>");  
+document.write(student.dob); 
+document.write("</br>"); 
+document.write(student.mobileno); 
+document.write("</br>"); 
+function student1(name,college,dob,mobileno){ 
+this.name=name; 
+this.college=college; 
+this.dob=dob;
+this.mobileno=mobileno;
+ } 
+stud=new student1("Thota Santosh","RVR and JC","23-04-1998",9642217034); 
+document.write("</br>"); 
+document.write(stud.name);
+document.write("</br>");  
+document.write(stud.college);
+document.write("</br>");  
+document.write(stud.dob); 
+document.write("</br>"); 
+document.write(stud.mobileno);
+
+function student2(name,college,dob,mobileno){ 
+this.name=name; 
+this.college=college; 
+this.dob=dob; 
+this.mobileno=mobileno; 
+
+function mobileno1(othermobileno){ 
+this.mobileno1=othermobileno;
+ }
+//this.mobileno=mobileno;
+ } 
+stud1=new student2("Sonoo Jaiswal","Vignan Degree College","22-04-2000","9642217034"); 
+document.write(stud1.name+" "+stud1.college+" "+stud1.dob+""+stud1.mobileno); 
+
+//stud1.mobileno1("6281919870"); 
+document.write("<br>"+stud1.name+" "+stud1.college+" "+stud1.dob+" "+stud1.mobileno1); 
+alert("welcome to JavaScript");
+var students =new Array("Santosh", "Akhil", "Kushal","Veera","Mahesh");
+document.write("students are")
+document.write("</br>")
+document.writeln("-------------")
+document.write("</br>")
+for(i=0;i<students.length;i++){
+document.write("</br>"+students[i]+"</br>");
+
+</script>
+</head> <body> </body> </html>

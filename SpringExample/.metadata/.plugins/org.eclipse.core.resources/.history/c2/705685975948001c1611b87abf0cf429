@@ -1,0 +1,8 @@
+package com.example.demo.impl;
+
+public class DefaultValidateUser {
+	public String valid(String password)
+	{
+		return ("password:"+password);
+	}
+}

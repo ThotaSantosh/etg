@@ -1,0 +1,5 @@
+package com.sonata.Dao;
+public interface EmpDao {
+
+	public int save(Object object);
+}

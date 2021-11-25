@@ -1,0 +1,42 @@
+package com.sonata.DAO;
+
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+public class UserServiceImpl implements UserDAO {
+
+	@Override
+	public int save(Object obj) {
+		try {
+			User=(User)obj;
+			PreparedStatement cs=db.getConnection().prepareStatement("insert into user values(?,?,?,?,?,?,?,?,?)");
+			cs.setInt(1,User.getuserId());
+			cs.setString(2,user.getuserName());
+			cs.setDouble(3, user.getemail());
+			row=cs.executeUpdate();
+			db.closeConnection();
+		}catch(SQLException e) {System.out.println(e);}
+		return row;
+		
+	}
+
+	@Override
+	public int update(Object obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void delete(Object obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List read() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

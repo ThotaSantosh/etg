@@ -1,0 +1,11 @@
+package com.sonata.DAO;
+
+import java.util.List;
+
+public interface UserDAO {
+	
+	public int save(Object obj);
+	public int update(Object obj);
+	public void delete(Object obj);
+	public List read(); 
+}

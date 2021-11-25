@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.module.Configuration"/>
+    <fullyQualifiedTypeName name="com.sonata.Student"/>
+    <fullyQualifiedTypeName name="com.sonata.dao.StudentDAO"/>
+</qualifiedTypeNameHistroy>

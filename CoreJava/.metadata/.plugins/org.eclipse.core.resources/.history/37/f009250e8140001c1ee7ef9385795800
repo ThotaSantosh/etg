@@ -1,0 +1,9 @@
+package com.sonata.Employee;
+
+public class TechnicalEmployee extends Employee {
+	private String technicalSkills;
+	public TechnicalEmployee(int empId,String empName,String address,String technicalSkills) {
+		super(empId,empName,address);
+		this.technicalSkills=technicalSkills;
+	}
+}

@@ -1,0 +1,21 @@
+package com.sonata;
+
+public class Rectangle extends Shape {
+Rectangle(int l,int b,int w){
+	super(l,b,w);
+}
+Rectangle(){}
+public double area(int l,int b,int w){
+	super.area(l, b, w);
+	System.out.println("child class");
+	return area=l*b*w;
+}
+public static void main(String args[]) {
+	Rectangle R=new Rectangle();
+	R.length=10;
+	R.breadth=20;
+	R.width=30;
+	R.display();
+	
+}
+}

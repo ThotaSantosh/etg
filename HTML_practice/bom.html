@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script>
+     function newWindow() {
+	 myWindow = window.open();
+         myWindow.focus();
+	
+	  }
+	 function closeWindow(){
+	 myWindow.close();
+	myWindow.setTimeout(newWindow(),1000);
+	 }
+
+    </script>
+</head>
+<body>
+  <p>Click the below links</p>
+  <a href="JavaScript:newWindow()"> 
+	OPEN
+	<br><br>
+  </a>
+  <a href="JavaScript:closeWindow()"> CLOSE 
+  
+  </a>
+  </body>
+</html>
+
+
+
+
+

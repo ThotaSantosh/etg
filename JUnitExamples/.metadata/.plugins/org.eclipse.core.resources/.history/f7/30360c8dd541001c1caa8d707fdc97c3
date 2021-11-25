@@ -1,0 +1,14 @@
+package com.sonata.BeanTest;
+import static org.junit.Assert.assertArrayEquals;
+public class TestEmpDetails {
+	empBussinessLogic elogic=new empBussinessLogic();
+	empDetails emp=new empDetails();
+	
+	public void testappSalary() {
+		emp.setName("santosh");
+				emp.setAge(23);
+				emp.setSalary(200);
+				double appraisal=elogic.appSalary(emp);
+				
+	}
+}

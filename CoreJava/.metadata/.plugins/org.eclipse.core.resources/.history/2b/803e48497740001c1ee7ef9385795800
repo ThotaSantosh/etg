@@ -1,0 +1,24 @@
+package com.sonata.Employee;
+
+public abstract class EmployeeExample {
+abstract void calculateSalary();
+public abstract void display() {}
+}
+public class TechnicalEmployee extends EmployeeExample{
+	private int empId;
+	private String empName;
+	private String address;
+	private double basicPay;	
+}
+public class Staff extends EmployeeExample{
+	private int empId;
+	private String empName;
+	private String address;
+	private double basicPay;
+	@Override
+	void calculateSalary() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

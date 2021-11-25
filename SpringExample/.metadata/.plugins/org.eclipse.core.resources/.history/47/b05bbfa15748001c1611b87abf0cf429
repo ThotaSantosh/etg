@@ -1,0 +1,8 @@
+package com.example.demo.impl;
+import org.springframework.stereotype.Component;
+public class DefaultUserValidation {
+	public String validate(String Uname,String password)
+	{
+		return ("user name:"+Uname);
+	}
+}

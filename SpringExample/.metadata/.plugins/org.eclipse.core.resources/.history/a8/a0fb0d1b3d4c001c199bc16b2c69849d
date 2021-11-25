@@ -1,0 +1,74 @@
+package com.example.demo.impl;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.example.demo.TaskDao;
+import com.example.demo.TaskInterface;
+@Component
+public class DefaultTask implements TaskInterface {
+
+	@Override
+	public Task getTask(int id) {
+		Task t  = new Task();
+		//conntec the db, get the task with id 
+		t.setTaskid(100);
+		t.setCreatorid(20);
+		t.setOwnerid(73);
+		t.setTaskname("REST Controller");
+		t.setDesc("Write a rest contrller for getting tasks");
+		return t;
+	}
+	@Override
+	List<Task> tlist = new ArrayList<>();
+	try {
+	PreparedStatement ps1 = db.getConnection().prepareStatement("select taskID,Name from task");
+	ResultSet rs = ps1.executeQuery();
+	Task t = new Task();
+	int id = rs.getInt(1);
+	int oid = rs.getInt(2);
+	int cid = rs.getInt(3);
+	String name = rs.getString(4);
+	String des = rs.getString(5);
+	String sts = rs.getString(6);
+	String prt = rs.getString(7);
+	String note = rs.getString(8);
+	boolean bmark = rs.getBoolean(9);
+	String createon = rs.getString(10);
+	String statuschange = rs.getString(11);
+	t.setTaskid(id);
+	t.setCreatorid(oid);
+	t.setOwnerid(cid);
+	t.setTaskname(name);
+	t.setDesc(des);
+	t.setStatus(sts);
+	t.setPriority(prt);
+	t.setNotes(note);
+	t.setIsBookmarked(bmark);
+	t.setCreatedOn(createon);
+	t.setStatusChangedOn(statuschange);
+	}catch(SQLException se) {se.printStackTrace();}
+
+
+	@Override
+	public List<Task> getAllTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Task getTask() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	return tlist;
+	}
+}

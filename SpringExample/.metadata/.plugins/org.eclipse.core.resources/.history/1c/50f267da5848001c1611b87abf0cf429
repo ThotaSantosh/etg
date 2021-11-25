@@ -1,0 +1,7 @@
+package com.example.demo;
+
+public interface UserValidationInterface {
+public String validate(String Uname);
+
+public char[] UserValidation(String string);
+}

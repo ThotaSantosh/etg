@@ -1,0 +1,5 @@
+package com.sonata.impl;
+
+public class UserServiceImpl {
+
+}

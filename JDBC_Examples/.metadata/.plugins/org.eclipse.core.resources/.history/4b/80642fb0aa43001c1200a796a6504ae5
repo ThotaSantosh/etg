@@ -1,0 +1,8 @@
+package com.sonata.impl;
+
+import com.sonata.DAO.UserDAO;
+
+public class UserServiceImpl implements UserDAO {
+
+	
+}

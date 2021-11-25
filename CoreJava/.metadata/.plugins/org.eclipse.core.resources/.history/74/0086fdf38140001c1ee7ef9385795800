@@ -1,0 +1,9 @@
+package com.sonata.Employee;
+
+public class SalaryException extends Exception {
+
+	 public SalaryException (String str)  
+	    {  
+		 super(str);  
+	    }  
+}

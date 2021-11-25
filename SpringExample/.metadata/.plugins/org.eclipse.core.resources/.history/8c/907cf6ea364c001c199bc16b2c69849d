@@ -1,0 +1,24 @@
+package com.example.demo.impl;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+import com.example.demo.Task;
+import com.example.demo.TaskInterface;
+@Component
+public class DefaultTask implements TaskInterface {
+
+	@Override
+	public Task getTask(int id) {
+		Task t  = new Task();
+		//conntec the db, get the task with id 
+		t.setTaskID(100);
+		t.setOwnerID(20);
+		t.setCreatorID(73);
+		t.setName("REST Controller");
+		t.setDescription("Write a rest contrller for getting tasks");
+		return t;
+	}

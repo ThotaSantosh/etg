@@ -1,0 +1,24 @@
+package com.sonata.DaoImpl;
+import java.sql.*;
+import java.util.*;
+
+import com.sonata.DBConnection.DbConnection;
+import com.sonata.Dao.*;
+import com.sonata.Model.*;
+public class EmpDAOImpl implements EmpDao{
+int row=0;
+DbConnection db=new DbConnection();
+Employee employee=null;
+public int save(Object object) {
+	try {
+		employee=(Employee)object;
+		PreparedStatement cs=db.getConnection().prepareStatement("insert into Employee values(?,?,?,?)");
+		cs.setInt(1,employee.getEmpId());
+		cs.setString(2,employee.getEmpName());
+		cs.setDouble(3, employee.getEmpSal());
+		row=cs.executeUpdate();
+		db.closeConnection();
+	}catch(SQLException e) {System.out.println(e);}
+	return row;
+}
+}

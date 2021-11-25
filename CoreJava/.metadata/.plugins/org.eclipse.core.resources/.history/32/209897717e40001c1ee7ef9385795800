@@ -1,0 +1,58 @@
+package com.sonata.Employee;
+abstract class Emp{
+	abstract double calculateSal();
+	abstract void display();
+}
+ class TechnicalEmp extends Emp {
+	private int empId;
+	private String empName;
+	private String address;
+	private double sal;
+	private double basicPay;
+	private float HRA;
+	
+	TechnicalEmp() {
+		this.empId=empId;
+		this.empName=empName;
+		this.address=address;
+		this.basicPay=basicPay;
+		
+	}
+	double calculateSal() {
+		return sal=basicPay+HRA;
+	}
+ class Staff extends Emp{
+		private int empId;
+		private String empName;
+		private String address;
+		private double basicPay;
+		 
+		 Staff() {
+			 System.out.println(this.empId);
+			 System.out.println(this.empName);
+			 System.out.println(this.address);
+			 System.out.println(this.basicPay);
+			 
+		 }
+		 public double calculateSal() {
+				return sal=basicPay+HRA; 
+			 }
+		@Override
+		void display() {
+			// TODO Auto-generated method stub
+			
+		}
+ }
+@Override
+void display() {
+	// TODO Auto-generated method stub
+	
+}
+ }
+	public class EmployeeDetails{
+		public static void main(String[] args) {
+			EmployeeDetails e=new EmployeeDetails()
+			
+		}
+	}
+

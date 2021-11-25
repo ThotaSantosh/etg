@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import java.util.List;
+
+import org.springframework.scheduling.config.Task;
+
+public interface TaskInterface {
+	//public Task getTask(int id);
+	public List <Task>getAllTasks();
+
+	public Task getTask(int id);
+
+	public Task getTask();
+	
+	public String setPriority();
+}
+
+
+
+

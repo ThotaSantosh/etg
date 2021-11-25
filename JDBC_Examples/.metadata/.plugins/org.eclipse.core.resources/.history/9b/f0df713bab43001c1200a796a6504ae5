@@ -1,0 +1,31 @@
+package com.sonata.DAO;
+
+import java.util.List;
+
+public class UserServiceImpl implements UserDAO {
+
+	@Override
+	public int save(Object obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Object obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void delete(Object obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List read() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

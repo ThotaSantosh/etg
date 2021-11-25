@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Variables</title>
+<script> 
+var i; 
+var stud = new Array(); 
+stud[0] = "Santosh"; 
+stud[1] = "Varun"; 
+stud[2] = "Akhil";
+stud[3] = "Roshan";
+stud[4] = "vineeth";
+ 
+for (i=0;i<stud.length;i++) { 
+document.write("ETG Students are");
+document.write(stud[i] + "<br>"); 
+} 
+document.write("------------------------------");
+document.write('</br>');
+var i; 
+var trainer = new Array(); 
+trainer[0] = "Jayashree"; 
+trainer[1] = "Ganesh"; 
+trainer[2] = "Sheela"; 
+for (i=0;i<trainer.length;i++) { 
+document.write("ETG Trainers are");
+document.write(trainer[i] + "<br>"); 
+} 
+document.write("------------------------------");
+document.write('</br>');
+var con=stud.concat(trainer);
+for(i=0;i<con.length;i++){
+document.write(con[i]+"<br>");
+
+}
+document.write("------------------------------");
+document.write('</br>');
+document.write(con.reverse());
+document.write('</br>');
+document.write("------------------------------");
+document.write('</br>');
+document.write(con.push('Mahesh'));
+document.write('</br>');
+document.write("------------------------------");
+document.write('</br>');
+document.write(con.pop());
+document.write('</br>');
+document.write("==========================================");
+document.write('</br>');
+var str="I will complete it jayashree by santosh";
+document.write("The lower case is:"+str.toLowerCase());
+document.write('</br>');
+document.write("------------------------------");
+document.write('</br>');
+document.write("The upper case is:"+str.toUpperCase());
+
+</script>
+</head> <body>
+ </body> </html>

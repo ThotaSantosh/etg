@@ -1,0 +1,25 @@
+package com.sonata;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+//import com.sonata.dao.StudentDAO;
+
+public class TestStudent {
+
+	
+	public static void main(String[] args) {
+		
+		Student s1=new Student();
+		std.setStdId(23);
+		std.setStdName("santosh");
+		SessionFactory factory= new Configuration().configure().buildSessionFactory();
+		Session s1 = factory.openSession();
+		//Student stu2= (Student)s1.load(Student.class,2);
+		s1.getTransaction().commit();
+		s1.close();
+
+	}
+
+}

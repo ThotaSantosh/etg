@@ -1,0 +1,13 @@
+package com.sonata.InterfaceExample;
+
+public class Product {
+	int pId;
+	String pName;
+	double pprice;
+	Product() {}
+	public Bank(int pId,String pName,double pprice) {
+	this.pId=accId;
+	this.pName=accName;
+	this.pprice=pprice;
+	}
+}

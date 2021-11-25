@@ -1,0 +1,19 @@
+package com.sonata;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.sonata.dao.StudentDAO;
+
+public class TestStudent {
+
+	
+	public static void main(String[] args) {
+		StudentDAO std = new StudentDAO();
+		  std.getStudent(21018);
+		 
+		  
+	}
+
+}
