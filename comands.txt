@@ -1,0 +1,23 @@
+/*Angular commands for casestudy(DataBase)*/
+
+create database tms;
+use tms;
+show tables;
+describe task;
+describe user;
+select * from task;
+select * from user;
+
+
+
+/*React commands for CaseStudy(DataBase)*/
+
+Create database casestudy;
+use casestudy;
+show tables;
+describe task;
+describe user;
+select * from task;
+select * from user;
+
+

@@ -1,0 +1,12 @@
+{
+  "name": "nodejsexample",
+  "version": "1.0.0",
+  "description": "this is node example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
+  "author": "Santosh",
+  "license": "ISC"
+}
